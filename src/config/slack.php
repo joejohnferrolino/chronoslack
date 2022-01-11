@@ -19,5 +19,5 @@ return [
     /**
      * The channel to send log messages.
      */
-    'channel' => env('LOG_SLACK_CHANNEL'),
+    'channel' => env('LOG_SLACK_CHANNEL', ''),
 ];
