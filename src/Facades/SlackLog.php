@@ -3,7 +3,7 @@
 namespace Chronostep\Chronoslack\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Chronostep\Chronolog\Services\SlackLogging;
+use Chronostep\Chronoslack\Services\SlackLogging;
 
 class SlackLog extends Facade
 {

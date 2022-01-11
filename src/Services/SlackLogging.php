@@ -3,8 +3,8 @@
 namespace Chronostep\Chronoslack\Services;
 
 use Illuminate\Support\Facades\Notification;
-use Chronostep\Chronolog\Exceptions\SlackWebhookNotDefined;
-use Chronostep\Chronolog\Notifications\SlackLogNotification;
+use Chronostep\Chronoslack\Exceptions\SlackWebhookNotDefined;
+use Chronostep\Chronoslack\Notifications\SlackLogNotification;
 
 class SlackLogging
 {
@@ -25,7 +25,7 @@ class SlackLogging
      */
     public function isErrorEnabled(): bool
     {
-        return config('slack.log', true)
+        return config('slack.log', true);
     }
 
     /**
