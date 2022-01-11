@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Chronostep\\Chronoslack\\SlackLogServiceProvider"
+                "Chronostep\\Chronoslack\\Providers\\SlackLogServiceProvider"
             ],
             "aliases": {
                 "SlackLog": "Chronostep\\Chronoslack\\Facades\\SlackLog"

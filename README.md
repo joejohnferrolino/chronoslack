@@ -2,4 +2,7 @@
 This package it will sent logging notification on slack.
 
 # Installation Procedure
-TODO
+## Install Composer Package
+```
+composer require chronostep/chronoslack
+```
