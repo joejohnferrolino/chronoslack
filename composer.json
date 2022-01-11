@@ -1,0 +1,33 @@
+{
+    "name": "chronostep/chronoslack",
+    "description": "This is slack Logging notification.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chronostep",
+            "email": "info@chronostep.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.75",
+        "laravel/slack-notification-channel": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chronostep\\Chronoslack\\": "src/"
+      }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chronostep\\Chronoslack\\SlackLogServiceProvider"
+            ],
+            "aliases": {
+                "SlackLog": "Chronostep\\Chronoslack\\Facades\\SlackLog"
+            }
+        }
+    }
+}
