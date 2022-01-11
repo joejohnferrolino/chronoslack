@@ -14,10 +14,10 @@ return [
     /**
      * Setting true/false to enable and disable the log.
      */
-    'log' => env('LOG_SLACK_LOG', false)
+    'log' => env('LOG_SLACK_LOG', false),
 
     /**
      * The channel to send log messages.
      */
-    'channel' => env('LOG_SLACK_CHANNEL', 'null'),
+    'channel' => env('LOG_SLACK_CHANNEL'),
 ];
