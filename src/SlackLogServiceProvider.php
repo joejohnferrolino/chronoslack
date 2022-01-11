@@ -1,6 +1,6 @@
 <?php
 
-namespace Chronostep\Chronoslack\Providers;
+namespace Chronostep\Chronoslack;
 
 use Illuminate\Support\ServiceProvider;
 use Chronostep\Chronolog\Services\SlackLogging;
