@@ -42,6 +42,7 @@ class SlackLogging
         }
 
         Notification::route('slack', config('slack.webhook-url'))
-            ->notify(new SlackLogNotification($message));
+            ->notify(new SlackLogNotification(json_encode($message))
+        );
     }
 }
