@@ -45,8 +45,13 @@ class SlackLogNotification extends Notification
     public function toSlack($notifiable)
     {
         return (new SlackMessage)
-        ->from(config('slack.name'))
-        ->to(config('slack.channel'))
-        ->content($this->message);
+            ->error()
+            ->from(config('slack.name'), ':boom:')
+            ->to(config('slack.channel'))
+            ->attachment(function ($attachment) {
+                $attachment->title('Message')
+                    ->content($this->message)
+                    ->markdown(['text']);
+            });
     }
 }
