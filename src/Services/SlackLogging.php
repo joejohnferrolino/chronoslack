@@ -65,7 +65,7 @@ class SlackLogging
         $slackMessage = [
             'Status'    => $errors['status'],
             'Message'   => $errors['message'],
-            'Access ID' => $server['UNIQUE_ID'],
+            'Access ID' => !empty($server['UNIQUE_ID']) ? $server['UNIQUE_ID'] : uniqid('@', true),
             'Method'    => $server['REQUEST_METHOD'],
             'Endpoint'  => $server['REQUEST_URI'],
             'Query'     => str_replace("\n", "", $requestBody)
