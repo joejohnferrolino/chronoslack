@@ -56,7 +56,7 @@ class SlackLogging
         //* Request Server
         $server = request()->server();
         foreach ($server as $k => $v) {
-            if (strpos($v, 'password') !== false) {
+            if (is_string($v) && strpos($v, 'password') !== false) {
                 $v = preg_replace('/(password)=([^&]+)/', '${1}=********', $v);
                 $server[$k] = $v;
             }
