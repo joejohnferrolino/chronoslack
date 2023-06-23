@@ -2,6 +2,7 @@
 
 namespace Chronostep\Chronoslack\Services;
 
+use BPDetect;
 use Illuminate\Support\Facades\Notification;
 use Chronostep\Chronoslack\Exceptions\SlackWebhookNotDefined;
 use Chronostep\Chronoslack\Notifications\SlackLogNotification;
@@ -71,8 +72,12 @@ class SlackLogging
             'Query'     => str_replace("\n", "", $requestBody)
         ];
 
+        // Detecting browser and platform using
+        $bpResult = BPDetect::detect();
+        $mergedArray = array_merge($slackMessage, $bpResult);
+
         Notification::route('slack', config('slack.webhook-url'))
-            ->notify(new SlackLogNotification(self::format4Slack($slackMessage))
+            ->notify(new SlackLogNotification(self::format4Slack($mergedArray))
         );
     }
 

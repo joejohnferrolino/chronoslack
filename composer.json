@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/slack-notification-channel": "^2.3"
+        "laravel/slack-notification-channel": "^2.3",
+        "chronostep/chronobrowserplatform": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -22,10 +23,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Chronostep\\Chronoslack\\SlackLogServiceProvider"
+                "Chronostep\\Chronoslack\\SlackLogServiceProvider",
+                "Chronostep\\Chronobrowserplatform\\BPDetectServiceProvider"
             ],
             "aliases": {
-                "SlackLog": "Chronostep\\Chronoslack\\Facades\\SlackLog"
+                "SlackLog": "Chronostep\\Chronoslack\\Facades\\SlackLog",
+                "BPDetect": "Chronostep\\Chronobrowserplatform\\Facades\\BPDetect"
             }
         }
     }
