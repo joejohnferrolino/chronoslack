@@ -1,5 +1,5 @@
 # Slack Logging Notification
-This package will be sent logging notification on slack.
+This package will be sent logging notification on slack and browser platform detection
 
 ## Source
 ||URL|
